@@ -1,0 +1,199 @@
+{
+  "frames" :[
+    {
+    "frameNumber" : 0,
+    "scene" : {
+      "camera" : {
+        "target" : [0, 3, 0],
+        "eye" : [0, 4, -20],
+        "worldUp" : [0, 1, 0],
+        "fov" : 45,
+        "width" : 1024,
+        "height": 1024
+      },
+      "primitives" : [
+        {
+          "shape" : "SquarePlane",
+          "name" : "Floor",
+          "material" : "texturedMaterial",
+          "transform" : {
+            "translate" : [0, 2.5, 0],
+            "rotate" : [-90, 0, 0],
+            "scale" : [30, 30, 1]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "sphere1",
+          "material" : "glass1",
+          "transform" : {
+            "translate" : [0.2, 3.5, -1],
+            "rotate" : [0,0,0],
+            "scale" : [1, 1, 1]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "sphere1",
+          "material" : "chromeMirror",
+          "transform" : {
+            "translate" : [-1, 3.5, -4],
+            "rotate" : [0,0,0],
+            "scale" : [1, 1, 1]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "sphere1",
+          "material" : "matteGreen",
+          "transform" : {
+            "translate" : [0, 2.7, -8],
+            "rotate" : [0,0,0],
+            "scale" : [0.2, 0.2, 0.2]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "sphere1",
+          "material" : "Mirror2",
+          "transform" : {
+            "translate" : [1, 2.7, -6],
+            "rotate" : [0,0,0],
+            "scale" : [0.2, 0.2, 0.2]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "sphere1",
+          "material" : "glass2",
+          "transform" : {
+            "translate" : [2, 2.7, -6],
+            "rotate" : [0,0,0],
+            "scale" : [0.2, 0.2, 0.2]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "sphere1",
+          "material" : "matteWhite",
+          "transform" : {
+            "translate" : [1.5, 2.7, -4],
+            "rotate" : [0,0,0],
+            "scale" : [0.2, 0.2, 0.2]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "sphere1",
+          "material" : "Mirror2",
+          "transform" : {
+            "translate" : [0, 2.7, -10],
+            "rotate" : [0,0,0],
+            "scale" : [0.2, 0.2, 0.2]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "sphere1",
+          "material" : "transmissiveMaterial",
+          "transform" : {
+            "translate" : [-1.3, 2.7, -8],
+            "rotate" : [0,0,0],
+            "scale" : [0.2, 0.2, 0.2]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "sphere1",
+          "material" : "matteRed",
+          "transform" : {
+            "translate" : [0.8, 2.7, -12],
+            "rotate" : [0,0,0],
+            "scale" : [0.6, 0.2, 0.2]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "sphere1",
+          "material" : "matteGreen",
+          "transform" : {
+            "translate" : [1, 2.7, 1],
+            "rotate" : [0,0,0],
+            "scale" : [0.2, 0.2, 0.2]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "sphere1",
+          "material" : "matteRed",
+          "transform" : {
+            "translate" : [2, 2.7, 0.8],
+            "rotate" : [0,0,0],
+            "scale" : [0.2, 0.2, 0.2]
+          }
+        }
+      ],
+      "lights" : [
+      ],
+      "materials" : [
+        {
+          "type" : "MatteMaterial",
+          "name" : "matteWhite",
+            "Kd" : [0.85, 0.81, 0.78],
+          "sigma": 0
+        },
+        {
+          "type" : "MatteMaterial",
+          "name" : "matteGreen",
+            "Kd" : [0.7, 0.9, 0.2],
+          "sigma": 0
+        },
+        {
+          "type" : "MatteMaterial",
+          "name" : "matteRed",
+            "Kd" : [0.8, 0.3, 0.6],
+          "sigma": 0
+        },
+        {
+          "type": "MirrorMaterial",
+          "name": "chromeMirror",
+          "Kr": [1, 0.8, 0.5],
+          "roughness":0.005
+        },
+        {
+          "type": "MirrorMaterial",
+          "name": "Mirror2",
+          "Kr": [0.7, 0.4, 0.4],
+          "roughness":0.3
+        },
+        {
+          "type": "GlassMaterial",
+          "name": "glass1",
+          "Kt": [0.4, 0.9, 1],
+          "Kr": [0.3, 0.1, 0.2],
+          "eta": 1.2
+        },
+        {
+          "type": "GlassMaterial",
+          "name": "glass2",
+          "Kt": [0.9, 0.9, 0.5],
+          "Kr": [0.8, 0.8, 0.8],
+          "eta": 1.5
+        },
+        {
+          "type": "MatteMaterial",
+          "name": "texturedMaterial",
+          "Kd": [1, 1, 1],
+          "textureMap": "tex_nor_maps/Rock_9_Specular.jpg"
+        },
+        {
+          "type": "TransmissiveMaterial",
+          "name": "transmissiveMaterial",
+          "Kt": [0.2, 0.1, 0.7],
+          "eta": 1.3
+        }
+      ]
+    }
+  }
+]
+}

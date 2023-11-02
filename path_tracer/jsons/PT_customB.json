@@ -1,0 +1,119 @@
+{
+  "frames" :[
+    {
+    "frameNumber" : 0,
+    "scene" : {
+      "camera" : {
+        "target" : [0, 2.5, 0],
+        "eye" : [0, 5.5, -30],
+        "worldUp" : [0, 1, 0],
+        "fov" : 19.5,
+        "width" : 400,
+        "height": 400
+      },
+      "primitives" : [ 
+        {
+          "shape" : "SquarePlane",
+          "name" : "Back Wall",
+          "material" : "chromeMirror",
+          "transform" : {
+            "translate" : [-3.5,2.5,1],
+            "rotate" : [0,135,0],
+            "scale" : [10, 10, 1]
+          }
+        },
+        {
+          "shape" : "SquarePlane",
+          "name" : "Back Wall2",
+          "material" : "chromeMirror",
+          "transform" : {
+            "translate" : [3.5,2.5,1],
+            "rotate" : [0,-135,0],
+            "scale" : [10, 10, 1]
+          }
+        },
+        {
+          "shape" : "SquarePlane",
+          "name" : "Floor",
+          "material" : "matteWhite",
+          "transform" : {
+            "translate" : [0, -2.5, 0],
+            "rotate" : [-90, 0, 0],
+            "scale" : [10, 10, 1]
+          }
+        },
+        {
+          "shape" : "SquarePlane",
+          "name" : "Ceiling Wall",
+          "material" : "matteWhite",
+          "transform" : {
+            "translate" : [0, 7.5, 0],
+            "rotate" : [90,0,0],
+            "scale" : [10, 10, 1]
+          }
+        },
+        {
+          "shape" : "Cube",
+          "name" : "Long Cube",
+          "material" : "matteWhite",
+          "transform" : {
+            "translate" : [0, 0, 0],
+            "rotate" : [0,0,0],
+            "scale" : [3, 6, 3]
+          }
+        },
+        {
+          "shape" : "Mesh",
+          "name" : "test mesh",
+          "material" : "texturedMaterial",
+          "filename" : "objs/Rock_9.obj",
+          "transform" : {
+            "translate" : [0, 3, 0],
+            "rotate" : [0,0,0],
+            "scale" : [0.01, 0.01, 0.003]
+          }
+        }
+      ],
+      "lights" : [
+      {
+        "name" : "Light Source",
+        "type" : "SpotLight",
+        "lightColor" : [40,40,40],
+        "intensity" : 1,
+        "transform" : {
+          "translate" : [0,7.45,0],
+          "rotate" : [90,0,0],
+          "scale" : [1, 1, 1]
+        },
+        "innerAngle" : 35,
+        "outerAngle" : 40,
+        "isDelta" : false,
+        "twoSided" : true
+      }
+      ],
+      "materials" : [
+        {
+          "type" : "MatteMaterial",
+          "name" : "matteWhite",
+            "Kd" : [0.85, 0.81, 0.78],
+          "sigma": 0
+        },
+        {
+          "type": "MirrorMaterial",
+          "name": "chromeMirror",
+          "Kr": [1, 0.86, 0.6],
+          "roughness": 0.2
+        },
+        {
+          "type": "MirrorMaterial",
+          "name": "texturedMaterial",
+          "Kd": [1, 1, 1],
+          "textureMap": "tex_nor_maps/Rock_9_Base_Color.jpg",
+          "normalMap": "tex_nor_maps/Rock_9_Normal.jpg",
+          "roughnessMap": "tex_nor_maps/Rock_9_Mixed_AO.jpg"
+        }
+      ]
+    }
+  }
+]
+}

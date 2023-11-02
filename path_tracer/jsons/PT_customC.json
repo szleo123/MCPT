@@ -1,0 +1,56 @@
+{
+  "frames" :[
+    {
+    "frameNumber" : 0,
+    "scene" : {
+      "camera" : {
+        "target" : [0, 2.5, 0],
+        "eye" : [0, 5.5, -30],
+        "worldUp" : [0, 1, 0],
+        "fov" : 19.5,
+        "width" : 400,
+        "height": 400
+      },
+      "primitives" : [ 
+        {
+          "shape" : "Sphere",
+          "name" : "transmissive sphere",
+          "material" : "transmissiveMaterial",
+          "transform" : {
+            "translate" : [0, 1.25, 0],
+            "rotate" : [0,0,0],
+            "scale" : [3, 3, 3]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "inner sphere",
+          "material": "chromeMirror",
+          "transform" : {
+            "translate" : [0, 1.25, 0],
+            "rotate" : [0,0,0],
+            "scale" : [1.5, 1.5, 1.5]
+          }
+        }
+      ],
+      "lights" : [
+      ],
+      "materials" : [
+        {
+          "type": "MirrorMaterial",
+          "name": "chromeMirror",
+          "Kr": [1, 1, 1],
+          "roughness": 0.3,
+          "roughnessMap": "tex_nor_maps/ducreux.jpg"
+        },
+        {
+          "type": "TransmissiveMaterial",
+          "name": "transmissiveMaterial",
+          "Kt": [0.95, 1, 0.95],
+          "eta": 1.3
+        }
+      ]
+    }
+  }
+]
+}
